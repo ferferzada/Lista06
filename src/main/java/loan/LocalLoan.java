@@ -1,4 +1,4 @@
-package Loan;
+package loan;
 
 public class LocalLoan extends Loan {
     private Double inflationRate;

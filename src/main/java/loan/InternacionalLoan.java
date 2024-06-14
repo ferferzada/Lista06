@@ -1,4 +1,4 @@
-package Loan;
+package loan;
 
 public class InternacionalLoan  extends Loan{
 

@@ -1,4 +1,4 @@
-package Loan;
+package loan;
 
 public abstract class Loan {
 
