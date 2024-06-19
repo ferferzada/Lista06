@@ -1,5 +1,7 @@
 package loan;
 
+import java.util.ArrayList;
+
 public abstract class Loan {
 
     protected String customer;
@@ -26,26 +28,30 @@ public abstract class Loan {
         return instalmentRate;
     }
 
+    protected ArrayList<Installment> installmentArrayList;
+
     public Loan(String customer, Double value, Integer installments, Double instalmentRate) {
         this.customer = customer;
         this.value = value;
         this.installments = installments;
+        for(int i= 0; i < installments;i++){
+            installmentArrayList.add(new Installment(value));
+        }
         this.instalmentRate = instalmentRate;
     }
 
     public abstract Double getTotalLoan();
 
 
-    public Double valueInstallment(boolean delayed, Integer days){
-        if(delayed){
-            return value * (days *(value * instalmentRate));
-        }
-        return valueInstallment();
-    }
-    public Double valueInstallment(){
-        return value;
+
+    public Installment getInstallment(Integer installment){
+        return installmentArrayList.get(installment);
     }
 
 
     public abstract Double getTotalLoan(boolean delayed, Integer days);
+
+    public void setInstallmentsLate(Integer numberInstallment){
+        installmentArrayList.get(numberInstallment).setLate(true);
+    }
 }

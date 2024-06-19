@@ -17,9 +17,13 @@ public class InternacionalLoan  extends Loan{
     }
 
     @Override
-    public Double valueInstallment(boolean delayed, Integer days) {
+    public Double valueInstallment(Number Installment) {
+        Installment actualInstallment =  installmentArrayList.get(Installment);
+        if(actualInstallment.getLate()){
+            return actualInstallment.getValue() * (actualInstallment.getValue() * exchangeRate) + (actualInstallment.getValue() * transactionFee);
+        }
         var total = super.valueInstallment(delayed, days);
-        return total += (value * exchangeRate) + (value * transactionFee);
+        return total += (actualInstallment.getValue() * exchangeRate) + (actualInstallment.getValue() * transactionFee);
     }
 
     @Override

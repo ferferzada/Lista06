@@ -1,32 +1,32 @@
 package loan;
 
+import java.util.ArrayList;
+
 public class LocalLoan extends Loan {
     private Double inflationRate;
+
 
     public LocalLoan(String customer, Double value, Integer installments, Double instalmentRate, Double inflationRate) {
         super(customer, value, installments, instalmentRate);
         this.inflationRate = inflationRate;
     }
 
-    public Double valueInstallment(boolean delayed, Integer days) {
-        if (delayed) {
-            return super.valueInstallment(delayed, days) + (value * instalmentRate);
+    public Double valueInstallment(Integer numberInstallment) {
+        var actualInstallment = super.getInstallment(numberInstallment);
+        if(actualInstallment.getLate()){
+            return (actualInstallment.getValue() * (actualInstallment.getDays()* (actualInstallment.getValue() * instalmentRate )) );
         }
-        return super.valueInstallment();
-    }
+        return (actualInstallment.getValue());
 
-    public Double valueInstallment() {
-        return super.valueInstallment();
     }
 
     @Override
     public Double getTotalLoan() {
-        return getTotalLoan(false, null);
-    }
-
-    @Override
-    public Double getTotalLoan(boolean delayed, Integer days) {
-        return getInstallments() * valueInstallment(delayed, days);
+        Double total = 0D;
+        for (int i = 0; i < installmentArrayList.size();i++){
+            total += valueInstallment(i);
+        }
+        return total;
 
     }
 }
