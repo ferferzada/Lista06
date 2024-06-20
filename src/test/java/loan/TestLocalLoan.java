@@ -5,12 +5,24 @@ import org.junit.jupiter.api.Test;
 public class TestLocalLoan {
 
     @Test
-    @DisplayName("MARSELÃO SENDO VENDIDO COM IMPOSTO CERTO")
-    public void getCorrectValueLoan(){
-        LocalLoan Local =  new LocalLoan(
-                "Ruan",30D,3,0.05D,0.13D
-        );
+    @DisplayName("Should return correct installment value when not delayed")
+    public void installmentValueWhenNotDelayed() {
+        var loan = new LocalLoan("John Doe", 1000D, 10, 0.1, 0.05);
+        assertEquals(1000D, loan.valueInstallment(false, null));
+    }
 
+    @Test
+    @DisplayName("Should return correct total loan when not delayed")
+    public void totalLoanWhenNotDelayed() {
+        var loan = new LocalLoan("John Doe", 1000D, 10, 0.1, 0.05);
+        assertEquals(10000D, loan.getTotalLoan());
+    }
+
+    @Test
+    @DisplayName("Should return correct total loan when delayed")
+    public void totalLoanWhenDelayed() {
+        var loan = new LocalLoan("John Doe", 1000D, 10, 0.1, 0.05);
+        assertEquals(10000D, loan.getTotalLoan());
     }
 
 }

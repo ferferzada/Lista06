@@ -16,6 +16,7 @@ public class InternacionalLoan  extends Loan{
         this.transactionFee = transactionFee;
     }
 
+
     @Override
     public Double valueInstallment(boolean delayed, Integer days) {
         var total = super.valueInstallment(delayed, days);

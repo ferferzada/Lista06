@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="110d806d-d9fb-4f76-b6ea-21df5ceff124" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/loan/TestInternacionalLoan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loan/InternacionalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loan/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loan/LocalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/LocalLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +42,85 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.TestLocalLoan">
+    <configuration name="TestInternacionalLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lista06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loan" />
+      <option name="MAIN_CLASS_NAME" value="loan.TestInternacionalLoan" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestInternacionalLoan.totalLoanWhenDelayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lista06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loan" />
+      <option name="MAIN_CLASS_NAME" value="loan.TestInternacionalLoan" />
+      <option name="METHOD_NAME" value="totalLoanWhenDelayed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLocalLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lista06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loan" />
+      <option name="MAIN_CLASS_NAME" value="loan.TestLocalLoan" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLocalLoan.installmentValueWhenNotDelayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lista06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loan" />
+      <option name="MAIN_CLASS_NAME" value="loan.TestLocalLoan" />
+      <option name="METHOD_NAME" value="installmentValueWhenNotDelayed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestLocalLoan" />
+        <item itemvalue="JUnit.TestInternacionalLoan" />
+        <item itemvalue="JUnit.TestInternacionalLoan.totalLoanWhenDelayed" />
+        <item itemvalue="JUnit.TestLocalLoan.installmentValueWhenNotDelayed" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,5 +131,13 @@
       <updated>1718325824237</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lista06$TestLocalLoan_getInstallmentByIndex.ic" NAME="TestLocalLoan.getInstallmentByIndex Coverage Results" MODIFIED="1718921317420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>loan.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Lista06$TestLocalLoan.ic" NAME="TestLocalLoan Coverage Results" MODIFIED="1718920340084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>loan.*</FILTER>
+    </SUITE>
   </component>
 </project>
