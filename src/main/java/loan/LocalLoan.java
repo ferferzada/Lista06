@@ -14,7 +14,9 @@ public class LocalLoan extends Loan {
     public Double valueInstallment(Integer numberInstallment) {
         var actualInstallment = super.getInstallment(numberInstallment);
         if(actualInstallment.getLate()){
-            return (actualInstallment.getValue() * (actualInstallment.getDays()* (actualInstallment.getValue() * instalmentRate )) );
+            System.out.println("entro");
+            System.out.println((actualInstallment.getValue() * instalmentRate));
+            return actualInstallment.getValue() *  (actualInstallment.getDays() * (actualInstallment.getValue() * instalmentRate));
         }
         return (actualInstallment.getValue());
 
@@ -22,9 +24,9 @@ public class LocalLoan extends Loan {
 
     @Override
     public Double getTotalLoan() {
-        Double total = 0D;
-        for (int i = 0; i < installmentArrayList.size();i++){
-            total += valueInstallment(i);
+        Double total = 0.0;
+        for (Installment installment : installmentArrayList) {
+            total += valueInstallment(installmentArrayList.indexOf(installment));
         }
         return total;
 

@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="110d806d-d9fb-4f76-b6ea-21df5ceff124" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/loan/TesteIntercionalLoan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loan/Installment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/Installment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loan/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/Loan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loan/LocalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/LocalLoan.java" afterDir="false" />
@@ -57,7 +55,7 @@
   }
 }</component>
   <component name="RunManager" selected="JUnit.TestLocalLoan.totalLoanWithSomeLateInstallments">
-    <configuration name="TestLocalLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLocalLoan.getInstallmentByIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lista06" />
       <extension name="coverage">
         <pattern>
@@ -67,7 +65,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="loan" />
       <option name="MAIN_CLASS_NAME" value="loan.TestLocalLoan" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="getInstallmentByIndex" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,9 +138,9 @@
       <list>
         <item itemvalue="JUnit.TestLocalLoan.totalLoanWithSomeLateInstallments" />
         <item itemvalue="JUnit.TestLocalLoan.totalLoanWithNoLateInstallments" />
+        <item itemvalue="JUnit.TestLocalLoan.getInstallmentByIndex" />
         <item itemvalue="JUnit.TesteIntercionalLoan.totalLoanWithSomeLateInstallmentsInternational" />
         <item itemvalue="JUnit.TesteIntercionalLoan" />
-        <item itemvalue="JUnit.TestLocalLoan" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +155,26 @@
     </task>
     <servers />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="installmentArrayList.get(0).late" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lista06$TestLocalLoan_getInstallmentByIndex.ic" NAME="TestLocalLoan.getInstallmentByIndex Coverage Results" MODIFIED="1718921317420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>loan.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Lista06$TestLocalLoan.ic" NAME="TestLocalLoan Coverage Results" MODIFIED="1718920340084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>loan.*</FILTER>
     </SUITE>

@@ -16,9 +16,9 @@ public class TestLocalLoan {
     @Test
     @DisplayName("Should return correct total loan when some installments are late")
     public void totalLoanWithSomeLateInstallments() {
-        var loan = new LocalLoan("Carlos", 10000D, 1, 0.05, 0.05);
+        var loan = new LocalLoan("Carlos", 10000.0, 1, 0.05, 0.05);
         loan.setInstallmentsLate(1, true, 10);
-        assertNotEquals(1000D, loan.getTotalLoan());
+        assertEquals(10700D, loan.getTotalLoan());
     }
 
     @Test

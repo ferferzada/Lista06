@@ -52,7 +52,12 @@ public abstract class Loan {
     public abstract Double getTotalLoan();
 
     public void setInstallmentsLate(Integer numberInstallment, Boolean late, int days){
-        installmentArrayList.get(numberInstallment -1 ).setLate(true);
-        installmentArrayList.get(numberInstallment -1).setDays(days);
+        if (numberInstallment > 0 && numberInstallment <= installmentArrayList.size()) {
+            Installment actualInstallment = installmentArrayList.get(numberInstallment - 1);
+            actualInstallment.setLate(true);
+            actualInstallment.setDays(days);
+        } else {
+            throw new IllegalArgumentException("Invalid installment number: " + numberInstallment);
+        }
     }
 }

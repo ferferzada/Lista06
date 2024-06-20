@@ -17,7 +17,7 @@ public class InternacionalLoan  extends Loan{
     }
 
     public Double valueInstallment(Integer Installment) {
-        Installment actualInstallment =  installmentArrayList.get(Installment);
+        Installment actualInstallment =  installmentArrayList.get(Installment -1);
         var total = actualInstallment.getValue();
         if(actualInstallment.getLate()){
             total +=  (actualInstallment.getValue() * (actualInstallment.getDays()* (actualInstallment.getValue() * instalmentRate )) );
@@ -31,7 +31,7 @@ public class InternacionalLoan  extends Loan{
     @Override
     public Double getTotalLoan() {
         var total = 0D;
-        for (int i = 0; i < installmentArrayList.size(); i++) {
+        for (int i = 0; i < installmentArrayList.size() -1; i++) {
             total += valueInstallment(i);
         }
         return total;
