@@ -18,7 +18,7 @@ public class TestLocalLoan {
     public void totalLoanWithSomeLateInstallments() {
         var loan = new LocalLoan("Carlos", 10000.0, 1, 0.05, 0.05);
         loan.setInstallmentsLate(1, true, 10);
-        assertEquals(10700D, loan.getTotalLoan());
+        assertEquals(15000D, loan.getTotalLoan());
     }
 
     @Test

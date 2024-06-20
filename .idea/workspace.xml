@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/InternacionalLoan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loan/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loan/LocalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/LocalLoan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loan/TestLocalLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/loan/TesteIntercionalLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loan/TesteIntercionalLoan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,22 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TestLocalLoan.totalLoanWithSomeLateInstallments">
+  <component name="RunManager" selected="JUnit.TestLocalLoan">
+    <configuration name="TestLocalLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lista06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loan" />
+      <option name="MAIN_CLASS_NAME" value="loan.TestLocalLoan" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestLocalLoan.getInstallmentByIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lista06" />
       <extension name="coverage">
@@ -118,29 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TesteIntercionalLoan.totalLoanWithSomeLateInstallmentsInternational" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lista06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="loan.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="loan" />
-      <option name="MAIN_CLASS_NAME" value="loan.TesteIntercionalLoan" />
-      <option name="METHOD_NAME" value="totalLoanWithSomeLateInstallmentsInternational" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestLocalLoan" />
+        <item itemvalue="JUnit.TesteIntercionalLoan" />
         <item itemvalue="JUnit.TestLocalLoan.totalLoanWithSomeLateInstallments" />
         <item itemvalue="JUnit.TestLocalLoan.totalLoanWithNoLateInstallments" />
         <item itemvalue="JUnit.TestLocalLoan.getInstallmentByIndex" />
-        <item itemvalue="JUnit.TesteIntercionalLoan.totalLoanWithSomeLateInstallmentsInternational" />
-        <item itemvalue="JUnit.TesteIntercionalLoan" />
       </list>
     </recent_temporary>
   </component>

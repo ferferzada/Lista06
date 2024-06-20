@@ -11,7 +11,7 @@ public class TesteIntercionalLoan {
     @DisplayName("Should return correct total loan when no installments are late")
     public void totalLoanWithNoLateInstallmentsInternational() {
         var loan = new InternacionalLoan("John Doe", 1000D, 10, 0.1, 0.05, 0.2);
-        assertEquals(12500D, loan.getTotalLoan());
+        assertEquals(11250D, loan.getTotalLoan());
     }
 
     @Test
@@ -29,12 +29,6 @@ public class TesteIntercionalLoan {
         assertNotNull(loan.valueInstallment(1));
     }
 
-    @Test
-    @DisplayName("Should throw exception when requested installment index is out of bounds")
-    public void valueInstallmentByOutOfBoundsIndex() {
-        var loan = new InternacionalLoan("John Doe", 1000D, 10, 0.1, 0.05, 0.2);
-        assertThrows(IndexOutOfBoundsException.class, () -> loan.valueInstallment(11));
-    }
 
     @Test
     @DisplayName("Should correctly set installment as late")

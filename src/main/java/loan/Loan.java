@@ -28,7 +28,7 @@ public abstract class Loan {
         return instalmentRate;
     }
 
-    protected ArrayList<Installment> installmentArrayList = new ArrayList<Installment>(); ;
+    protected ArrayList<Installment> installmentArrayList = new ArrayList<>(); ;
 
     public Loan(String customer, Double value, Integer installments, Double instalmentRate) {
         this.customer = customer;
@@ -45,7 +45,7 @@ public abstract class Loan {
 
 
     public Installment getInstallment(Integer installment){
-        return installmentArrayList.get(installment);
+        return installmentArrayList.get(installment-1);
     }
 
 

@@ -17,7 +17,7 @@ public class InternacionalLoan  extends Loan{
     }
 
     public Double valueInstallment(Integer Installment) {
-        Installment actualInstallment =  installmentArrayList.get(Installment -1);
+        Installment actualInstallment =  installmentArrayList.get(Installment);
         var total = actualInstallment.getValue();
         if(actualInstallment.getLate()){
             total +=  (actualInstallment.getValue() * (actualInstallment.getDays()* (actualInstallment.getValue() * instalmentRate )) );
