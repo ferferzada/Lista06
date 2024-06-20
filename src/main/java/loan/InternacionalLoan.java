@@ -16,28 +16,25 @@ public class InternacionalLoan  extends Loan{
         this.transactionFee = transactionFee;
     }
 
-    @Override
-    public Double valueInstallment(Number Installment) {
+    public Double valueInstallment(Integer Installment) {
         Installment actualInstallment =  installmentArrayList.get(Installment);
+        var total = actualInstallment.getValue();
         if(actualInstallment.getLate()){
-            return actualInstallment.getValue() * (actualInstallment.getValue() * exchangeRate) + (actualInstallment.getValue() * transactionFee);
+            total +=  (actualInstallment.getValue() * (actualInstallment.getDays()* (actualInstallment.getValue() * instalmentRate )) );
+
         }
-        var total = super.valueInstallment(delayed, days);
         return total += (actualInstallment.getValue() * exchangeRate) + (actualInstallment.getValue() * transactionFee);
     }
 
-    @Override
-    public Double valueInstallment() {
-        return super.valueInstallment() + (value * exchangeRate) + (value * transactionFee);
-    }
+
 
     @Override
     public Double getTotalLoan() {
-        return getInstallments() * valueInstallment();
+        var total = 0D;
+        for (int i = 0; i < installmentArrayList.size(); i++) {
+            total += valueInstallment(i);
+        }
+        return total;
     }
 
-    @Override
-    public Double getTotalLoan(boolean delayed, Integer days) {
-        return getInstallments() * valueInstallment(delayed,days);
-    }
 }

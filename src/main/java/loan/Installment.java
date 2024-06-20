@@ -9,6 +9,7 @@ public class Installment {
 
     public Installment(Double value) {
         this.value = value;
+        this.late = false;
     }
 
     public Double getValue() {

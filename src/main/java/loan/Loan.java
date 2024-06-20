@@ -28,19 +28,19 @@ public abstract class Loan {
         return instalmentRate;
     }
 
-    protected ArrayList<Installment> installmentArrayList;
+    protected ArrayList<Installment> installmentArrayList = new ArrayList<Installment>(); ;
 
     public Loan(String customer, Double value, Integer installments, Double instalmentRate) {
         this.customer = customer;
         this.value = value;
         this.installments = installments;
         for(int i= 0; i < installments;i++){
-            installmentArrayList.add(new Installment(value));
+            Installment installmentNew = new Installment(value);
+            installmentArrayList.add(installmentNew);
         }
         this.instalmentRate = instalmentRate;
     }
 
-    public abstract Double getTotalLoan();
 
 
 
@@ -49,9 +49,10 @@ public abstract class Loan {
     }
 
 
-    public abstract Double getTotalLoan(boolean delayed, Integer days);
+    public abstract Double getTotalLoan();
 
-    public void setInstallmentsLate(Integer numberInstallment){
-        installmentArrayList.get(numberInstallment).setLate(true);
+    public void setInstallmentsLate(Integer numberInstallment, Boolean late, int days){
+        installmentArrayList.get(numberInstallment -1 ).setLate(true);
+        installmentArrayList.get(numberInstallment -1).setDays(days);
     }
 }

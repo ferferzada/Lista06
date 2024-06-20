@@ -29,4 +29,5 @@ public class LocalLoan extends Loan {
         return total;
 
     }
+
 }
